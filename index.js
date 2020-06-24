@@ -191,7 +191,7 @@ bot.on('message', function (msg) {
             disable_web_page_preview: true
         });
     } else if (msg.text === "Спитай про вступ") {
-        bot.sendMessage(msg.chat.id, kminmetauContactMessage, questions);
+        bot.sendMessage(msg.chat.id, questionsAndAnswers, questions);
     }
 
 });
