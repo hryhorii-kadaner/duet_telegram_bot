@@ -192,6 +192,8 @@ bot.on('message', function (msg) {
         });
     } else if (msg.text === "Спитай про вступ") {
         bot.sendMessage(msg.chat.id, questionsAndAnswers, questions);
-    }
+    } else if (msg.text === "Запитати щось інше") {
+        bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
+    } 
 
 });
