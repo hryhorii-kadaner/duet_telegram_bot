@@ -140,20 +140,7 @@ bot.on('message', function (msg) {
     } else if (msg.text === "Наші контакти") {
         bot.sendMessage(msg.chat.id, "Наші контакти в меню", ourContacts);
     } else if (msg.text === "Державний університет економіки та технологій") {
-        bot.sendMessage(msg.chat.id, duetContactMessage, {
-            parse_mode: "HTML",
-            disable_web_page_preview: true,
-            contactDuet: {
-                "reply_markup": {
-                    hide_keyboard: false,
-                    "keyboard": [
-                        ["Економічний інститут (КЕІ КНЕУ)", "Технологічний інститут (КМІНметАУ)"],
-                        ["Наші контакти"],
-                        ["← На головну"]
-                    ]
-                }
-            }
-        });
+        bot.sendMessage(msg.chat.id, "Оберіть в меню", contactDuet);
     }
     else if (msg.text === "Криворізький коледж НМетАУ") {
         bot.sendMessage(msg.chat.id, kmtInUaContactMessage, {
