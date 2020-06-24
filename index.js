@@ -193,7 +193,7 @@ bot.on('message', function (msg) {
     } else if (msg.text === "Спитай про вступ") {
         bot.sendMessage(msg.chat.id, questionsAndAnswers, questions);
     } else if (msg.text === "Запитати щось інше") {
-        bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n <u>Приклад</u>\n<i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum molestias dicta fuga aliquam amet vero? Sint repellendus sapiente perferendis ducimus ab voluptas dolor nulla, asperiores optio quibusdam, placeat doloremque incidunt.</i>\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
+        bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n<b<u>Приклад</u>></b>\n<i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum molestias dicta fuga aliquam amet vero? Sint repellendus sapiente perferendis ducimus ab voluptas dolor nulla, asperiores optio quibusdam, placeat doloremque incidunt.</i>\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
     } 
 
 });
