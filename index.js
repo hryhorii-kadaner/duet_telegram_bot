@@ -73,8 +73,8 @@ let contactDuet = {
     "reply_markup": {
         hide_keyboard: false,
         "keyboard": [
-            ["Економічний інститут (КЕІ КНЕУ)", "Технологічний інститут (КМІНметАУ)"],
             ["Наші контакти"],
+            ["Економічний інститут (КЕІ КНЕУ)", "Технологічний інститут (КМІНметАУ)"],            
             ["← На головну"]
         ]
     }
@@ -89,7 +89,8 @@ let bachelorMessage = "<b>Бакалавр</b>\n\n<b><a href='https://www.kneu.d
 let magistr = "<b>Магістр</b>\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/ekonomika'>051 Економіка</a></b> - Економічна аналітика; Бізнес-економіка;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/oblik-ta-opodatkuvannya'>071 Облік і оподаткування</a></b> - Облік і аудит в управлінні підприємницькою діяльністю; Оподаткування підприємницької діяльності;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/finansi-bankivska-sprava-ta-strahuvannya'>072 Фінанси, банківська справа та страхування</a></b> - Управління корпоративними фінансами; Управління банківською діяльністю;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/menedzhment'>073 Менеджмент</a></b> - Управління підприємницькою діяльністю; Управління підприємством сфери послуг;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/marketing'>075 Маркетинг</a></b> - Маркетинговий менеджмент; Логістичний менеджмент;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/pidpriyemnictvo-torgivlya-ta-birzheva-diyalnist'>076 Підприємництво, торгівля та біржова діяльність</a></b> - Управління бізнес-проектами; Підприємництво;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/pravo'>081 Право</a></b> - Правове регулювання економіки; Господарське судочинство; Право у сфері громадської і політичної діяльності;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/inzheneriya-programnogo-zabezpechennya'>121 Інженерія програмного забезпечення</a></b> - Прикладне програмне забезпечення; Інформаційний менеджмент;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/publichne-upravlinnya-ta-administruvannya'>281 Публічне управління та адміністрування</a></b> - Управління на регіональному та місцевому рівні; Управління персоналом в публічній сфері;.\n\n<b><a href='https://www.kneu.dp.ua/ua/specialty/mizhnarodni-eknomichni-vidnosini'>292 Міжнародні економічні відносини</a></b> - Управління міжнародним бізнесом; Міжнародні торговельні відносини;.\n\n<b><a href='https://kmi.dp.ua/index.php/galuzeve-mashinobuduvannja/'>133 Галузеве машинобудування</a></b> - Галузеве машинобудування.\n\n<b><a href='https://kmi.dp.ua/index.php/metalurgija/'>136 Металургія</a></b> - Металургія.\n\n<b><a href='https://kmi.dp.ua/index.php/elektroenergetika-elektrotehnika-ta-elektromehanika/'>141 Електроенергетика, електротехніка та електромеханіка</a></b> - Електроенергетика, електротехніка та електромеханіка.\n\n<b><a href='https://kmi.dp.ua/index.php/avtomatizacija-ta-komp-jutrno-integrovani-tehnologii/'>151 Автоматизація та комп’ютерно-інтегровані технології</a></b> - Автоматизація та комп’ютерно-інтегровані технології.\n\n<b><a href='https://kmi.dp.ua/index.php/himichni-tehnologii-ta-inzhenerija/'>161 Хімічні технології та інженерія</a></b> - Хімічні технології та інженерія.\n\n";
 
 // Contact universities
-let duetContactMessage = "<b>Державний університет економіки та технологій</b>\n\n<b>Адреса:</b> вул. Медична, 16, м. Кривий Ріг \n<b>Тел:</b> <a href='tel:0982073648'>(098)-207-36-48</a>\n<b>E-mail:</b> <a href='mailto:'>keipk@kneu.edu.ua</a>\n<b>Сайт:</b> <a href='https://www.kneu.dp.ua'>https://www.kneu.dp.ua</a>\n<a href='https://www.facebook.com/kei.kneu1/'>https://www.facebook.com/kei.kneu1/</a>\n<a href='https://www.instagram.com/kei.kneu/'>https://www.instagram.com/kei.kneu/</a>";
+let duetContactMessage = "<b>Державний університет економіки та технологій:\n Економічний інститут (КЕІ КНЕУ)</b>\n\n<b>Адреса:</b> вул. Медична, 16, м. Кривий Ріг \n<b>Тел:</b> <a href='tel:0982073648'>(098)-207-36-48</a>\n<b>E-mail:</b> <a href='mailto:'>keipk@kneu.edu.ua</a>\n<b>Сайт:</b> <a href='https://www.kneu.dp.ua'>https://www.kneu.dp.ua</a>\n<a href='https://www.facebook.com/kei.kneu1/'>https://www.facebook.com/kei.kneu1/</a>\n<a href='https://www.instagram.com/kei.kneu/'>https://www.instagram.com/kei.kneu/</a>";
+let duetContactMessage2 = "<b>Державний університет економіки та технологій:\n Технологічний інститут (КМІНметАУ)</b>";
 let kmtInUaContactMessage = "<b>Криворізький коледж НМетАУ</b>\n\n<b>Адреса:</b> вул. Медична, 4, м. Кривий Ріг\n<b>Тел:</b> <a href='tel:0687809170'>(068)-780-91-70</a>\n<b>E-mail:</b> <a href='mailto:kknmetau18@gmail.com'>keipk@kneu.edu.ua</a>\n<b>Сайт:</b> <a href='https://kmt.in.ua'>https://kmt.in.ua</a>";
 let kkeuContactMessage = "<b>Криворізький коледж економіки та управління</b>\n\n<b>Адреса:</b> вул. Ватутіна, 37а, м. Кривий Ріг\n<b>Тел:</b> <a href='tel:0564947443'>(0564)94-74-43</a>, <a href='tel:0672620679'>(067)-262-06-79</a>\n<b>E-mail:</b> <a href='mailto:kkeu.metodkab@gmail.com'>kkeu.metodkab@gmail.com</a>\n<b>Сайт:</b> <a href='https://www.kkeu.dp.ua/'>https://www.kkeu.dp.ua/</a>\n<a href='https://www.facebook.com/kkey.kney/'>https://www.facebook.com/kkey.kney/</a>";
 let ktknmetauContactMessage = "<b>Криворізький технічний коледж НМетАУ</b>\n\n<b>Адреса:</b> вул. Степана Тільги, 40, м. Кривий Ріг\n<b>Тел:</b> <a href='tel:0677012597'>(067)701-25-97</a>, <a href='tel:0564947637'>(0564) 94-76-37</a>\n<b>E-mail:</b> <a href='mailto:ktknmetau@ukr.net'>ktknmetau@ukr.net</a>\n<b>Сайт:</b> <a href='https://kkht.dp.ua'>https://kkht.dp.ua</a>\n<a href='https://www.facebook.com/groups/921175404604094'>https://www.facebook.com/groups/921175404604094</a>\n<a href='https://www.instagram.com/ktk_nmetay_official/'>https://www.instagram.com/ktk_nmetay_official/</a>";
@@ -140,33 +141,38 @@ bot.on('message', function (msg) {
     } else if (msg.text === "Наші контакти") {
         bot.sendMessage(msg.chat.id, "Наші контакти в меню", ourContacts);
     } else if (msg.text === "Державний університет економіки та технологій") {
-        bot.sendMessage(msg.chat.id, "Оберіть в меню", contactDuet);
-    }
-    else if (msg.text === "Криворізький коледж НМетАУ") {
+        bot.sendMessage(msg.chat.id, "Оберіть в меню", contactDuet);        
+    } else if (msg.text === "Економічний інститут (КЕІ КНЕУ)") {
+        bot.sendMessage(msg.chat.id, duetContactMessage, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true
+        });
+    } else if (msg.text === "Технологічний інститут (КМІНметАУ)") {
+        bot.sendMessage(msg.chat.id, duetContactMessage2, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true
+        });
+    } else if (msg.text === "Криворізький коледж НМетАУ") {
         bot.sendMessage(msg.chat.id, kmtInUaContactMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    }
-    else if (msg.text === "Криворізький коледж економіки та управління") {
+    } else if (msg.text === "Криворізький коледж економіки та управління") {
         bot.sendMessage(msg.chat.id, kkeuContactMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    }
-    else if (msg.text === "Криворізький технічний коледж НМетАУ") {
+    } else if (msg.text === "Криворізький технічний коледж НМетАУ") {
         bot.sendMessage(msg.chat.id, ktknmetauContactMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    }
-    else if (msg.text === "Український політехнічний технікум") {
+    } else if (msg.text === "Український політехнічний технікум") {
         bot.sendMessage(msg.chat.id, uptContactMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    }
-    else if (msg.text === "Криворізький металургійний інститут Національної металургійної академії України") {
+    } else if (msg.text === "Криворізький металургійний інститут Національної металургійної академії України") {
         bot.sendMessage(msg.chat.id, kminmetauContactMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true
