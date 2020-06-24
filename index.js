@@ -152,6 +152,7 @@ bot.on('message', function (msg) {
                         ["← На головну"]
                     ]
                 }
+            }
         });
     }
     else if (msg.text === "Криворізький коледж НМетАУ") {
