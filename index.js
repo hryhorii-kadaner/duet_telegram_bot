@@ -143,7 +143,15 @@ bot.on('message', function (msg) {
         bot.sendMessage(msg.chat.id, duetContactMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true,
-            contactDuet
+            contactDuet: {
+                "reply_markup": {
+                    hide_keyboard: false,
+                    "keyboard": [
+                        ["Економічний інститут (КЕІ КНЕУ)", "Технологічний інститут (КМІНметАУ)"],
+                        ["Наші контакти"],
+                        ["← На головну"]
+                    ]
+                }
         });
     }
     else if (msg.text === "Криворізький коледж НМетАУ") {
