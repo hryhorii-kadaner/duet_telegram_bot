@@ -74,7 +74,7 @@ let contactDuet = {
         hide_keyboard: false,
         "keyboard": [
             ["Наші контакти"],
-            ["Економічний інститут (КЕІ КНЕУ)", "Технологічний інститут (КМІНметАУ)"],            
+            ["Економічний інститут (КЕІ КНЕУ)", "Технологічний інститут (КМІНметАУ)"],
             ["← На головну"]
         ]
     }
@@ -86,11 +86,22 @@ let questions = {
     "reply_markup": {
         hide_keyboard: false,
         "keyboard": [
-            ["Запитати щось інше"],            
+            ["Скільки заяв я можу подати?"],
+            ["Чи є обмеження за кількістю балів для вступу?"],
+            ["Чи повинен я подати заяву для вступу особисто у ЗВО?"],
+            ["Скільки бюджетних місць у вашому інституті?"],
+            ["Якщо я маю пільги, як буде відбуватись зарахування на бюджет?"],
+            ["Запитати щось інше"],
             ["← На головну"]
         ]
     }
 };
+
+let answer1 = "<b>Відповідь:</b>\nНа бюджетну форму навчання – 5 п’ять заяв на будь-які спеціальності та визначити пріоритетність кожної. На контракт – кількість заяв необмежена.",
+    answer2 = "<b>Відповідь:</b>\nТак, є для вступу на бюджет пороговий бал становить 125. Для вступу на спеціальність 081 «Право», 281 «Публічне управління та адміністрування», 29 «Міжнародні відносини» пороговий бал 140 для будь-якої форми навчання.",
+    answer3 = "<b>Відповідь:</b>\nНі, заява подається тільки в електронному вигляді в особистому електронному кабінеті вступника. Але Ви можете відвідати наш інститут та проконсультуватись, яким чином це зробити.",
+    answer4 = "<b>Відповідь:</b>\nБюджетні місця виділяються МОНУ для кожного абітурієнта на підставі конкурсного рейтингу. Від інституту це не залежить.",
+    answer5 = "<b>Відповідь:</b>\nЯкщо у Вас є пільги (або Ви вважаєте, що вони є), то Вам обов’язково необхідно з пакетом документів з’явитися до приймальної комісії для їх підтвердження. Існує два варіанти зарахування на бюджет. В першому варіанті абітурієнт зараховується відразу. В другому варіанті здійснюється переведення з контрактної форми навчання на бюджетну. Кожна ситуація є індивідуальною.";
 
 // Specialities messages
 let qualifiedWorkerMessage = "<b>Кваліфікований робітник</b>\n\n<b><a href='https://kmt.in.ua/abiturientu/spetsialnosti.html'>133 Галузеве машинобудування</a></b> - Обслуговування та ремонт обладнання металургійних підприємств.\n\n<b><a href='https://kmt.in.ua/abiturientu/spetsialnosti.html'>141 Електроенергетика, електротехніка та електромеханіка</a></b> - Монтаж і експлуатація електроустаткування підприємств і цивільних споруд.\n\n<b><a href='https://upt.in.ua/page-5.html'>133 Галузеве машинобудування (Український політехнічний технікум)</a></b> - Технологія обробки матеріалів на верстатах та автоматичних лініях.";
@@ -154,7 +165,7 @@ bot.on('message', function (msg) {
     } else if (msg.text === "Наші контакти") {
         bot.sendMessage(msg.chat.id, "Наші контакти в меню", ourContacts);
     } else if (msg.text === "Державний університет економіки та технологій") {
-        bot.sendMessage(msg.chat.id, "Оберіть в меню", contactDuet);        
+        bot.sendMessage(msg.chat.id, "Оберіть в меню", contactDuet);
     } else if (msg.text === "Економічний інститут (КЕІ КНЕУ)") {
         bot.sendMessage(msg.chat.id, duetContactMessage, {
             parse_mode: "HTML",
@@ -191,9 +202,34 @@ bot.on('message', function (msg) {
             disable_web_page_preview: true
         });
     } else if (msg.text === "Спитай про вступ") {
-        bot.sendMessage(msg.chat.id, questionsAndAnswers, questions);
+        bot.sendMessage(msg.chat.id, "Оберіть запитання в меню", questions);
+    } else if (msg.text === "Скільки заяв я можу подати?") {
+        bot.sendMessage(msg.chat.id, answer1, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true
+        });
+    } else if (msg.text === "Чи є обмеження за кількістю балів для вступу?") {
+        bot.sendMessage(msg.chat.id, answer2, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true
+        });
+    } else if (msg.text === "Чи повинен я подати заяву для вступу особисто у ЗВО?") {
+        bot.sendMessage(msg.chat.id, answer3, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true
+        });
+    } else if (msg.text === "Скільки бюджетних місць у вашому інституті?") {
+        bot.sendMessage(msg.chat.id, answer4, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true
+        });
+    } else if (msg.text === "Якщо я маю пільги, як буде відбуватись зарахування на бюджет?") {
+        bot.sendMessage(msg.chat.id, answer5, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true
+        });
     } else if (msg.text === "Запитати щось інше") {
         bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n<b><u>Приклад</u></b>\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum molestias dicta fuga aliquam amet vero? Sint repellendus sapiente perferendis ducimus ab voluptas dolor nulla, asperiores optio quibusdam, placeat doloremque incidunt.\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
-    } 
+    }
 
 });
