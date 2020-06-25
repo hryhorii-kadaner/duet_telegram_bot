@@ -14,7 +14,8 @@ let mainOptions = {
         "keyboard": [
             ["Про Державний університет економіки та технологій"],
             ["Спеціальності", "Спитай про вступ"],
-            [text="Екскурсія університетом ❌", url="https://www.kneu.dp.ua/ua/area/institut/institut-dlya-studenta"]
+            {text:"Екскурсія університетом ❌", url:"https://www.kneu.dp.ua/ua/area/institut/institut-dlya-studenta"},
+            ["Наші контакти"]
         ]
     }
 };
