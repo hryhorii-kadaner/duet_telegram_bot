@@ -103,8 +103,7 @@ let questions = {
 let mediaArray = [
     {
         "type": "photo",
-        "media": "images/library.jpg",
-        "caption":"Test media message"
+        "media": "images/library.jpg"        
     },
     {
         "type": "photo",
@@ -117,6 +116,10 @@ let mediaArray = [
     {
         "type": "photo",
         "media": "images/working-people.jpg"
+    },
+    {
+        "type": "text",
+        "caption":"Test media message"
     }
 ];
 
