@@ -118,7 +118,6 @@ let mediaArray = [
         "media": "images/working-people.jpg"
     },
     {
-        "type": "text",
         "caption":"Test media message"
     }
 ];
