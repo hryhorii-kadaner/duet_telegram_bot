@@ -254,7 +254,7 @@ bot.on('message', function (msg) {
     } else if (msg.text === "Запитати щось інше") {
         bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n<b><u>Приклад</u></b>\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum molestias dicta fuga aliquam amet vero? Sint repellendus sapiente perferendis ducimus ab voluptas dolor nulla, asperiores optio quibusdam, placeat doloremque incidunt.\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
     } else if (msg.text === "Екскурсія університетом") {
-        bot.sendMediaGroup(msg.chat.id, mediaArray, caption = "Test media message");
+        bot.sendMediaGroup(msg.chat.id, mediaArray, {caption:"Test media message"});
     }
 
 });
