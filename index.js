@@ -14,7 +14,7 @@ let mainOptions = {
         "keyboard": [
             ["Про Державний університет економіки та технологій"],
             ["Спеціальності", "Спитай про вступ"],
-            ["Екскурсія університетом ❌", "Наші контакти"]
+            ["Екскурсія університетом", "Наші контакти"]
         ]
     }
 };
@@ -103,15 +103,19 @@ let questions = {
 let mediaArray = [
     {
         "type": "photo",
-        "media": "images/cat.png"
+        "media": "images/library.jpg"
     },
     {
         "type": "photo",
-        "media": "images/cat.png"
+        "media": "images/people-at-office.jpg"
     },
     {
         "type": "photo",
-        "media": "images/cat.png"
+        "media": "images/teambuilding.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/working-people.jpg"
     }
 ];
 
@@ -249,6 +253,8 @@ bot.on('message', function (msg) {
         });
     } else if (msg.text === "Запитати щось інше") {
         bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n<b><u>Приклад</u></b>\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum molestias dicta fuga aliquam amet vero? Sint repellendus sapiente perferendis ducimus ab voluptas dolor nulla, asperiores optio quibusdam, placeat doloremque incidunt.\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
+    } else if (msg.text === "Екскурсія університетом") {
+        bot.sendMediaGroup(msg.chat.id, mediaArray, caption = "Test media message");
     }
 
 });
