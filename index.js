@@ -25,7 +25,7 @@ let aboutDUET = {
         "keyboard": [
             ["Загальна інформація ❌"],
             ["Структура Університету"],
-            ["Переваги ДУЕТ ❌"],
+            ["Переваги ДУЕТ"],
             ["← На головну"]
         ]
     }
@@ -100,11 +100,10 @@ let questions = {
     }
 };
 
-let mediaArray = [
-    {
+let mediaArray = [{
         "type": "photo",
         "media": "images/library.jpg",
-        "caption":"Test media message"       
+        "caption": "Test media message"
     },
     {
         "type": "photo",
@@ -259,7 +258,8 @@ bot.on('message', function (msg) {
     } else if (msg.text === "Структура Університету") {
         let video = 'video/structure.mp4';
         bot.sendVideo(msg.chat.id, video);
+    } else if (msg.text === "Переваги ДУЕТ") {
+        let adv = 'images/advantages.jpg';
+        bot.sendPhoto(msg.chat.id, adv);
     }
-    
-
 });
