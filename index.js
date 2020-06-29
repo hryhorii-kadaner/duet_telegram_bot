@@ -123,22 +123,6 @@ let mediaArrayFirst = [{
     {
         "type": "photo",
         "media": "images/firstMedia/6.jpg"
-    },
-    {
-        "type": "photo",
-        "media": "images/firstMedia/7.jpg"
-    },
-    {
-        "type": "photo",
-        "media": "images/firstMedia/8.jpg"
-    },
-    {
-        "type": "photo",
-        "media": "images/firstMedia/9.jpg"
-    },
-    {
-        "type": "photo",
-        "media": "images/firstMedia/10.jpg"
     }
 ];
 let mediaArraySecond = [{
