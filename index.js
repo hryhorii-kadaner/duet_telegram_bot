@@ -102,19 +102,109 @@ let questions = {
 
 let mediaArrayFirst = [{
         "type": "photo",
-        "media": "images/library.jpg"
+        "media": "images/firstMedia/1.jpg"
     },
     {
         "type": "photo",
-        "media": "images/people-at-office.jpg"
+        "media": "images/firstMedia/2.jpg"
     },
     {
         "type": "photo",
-        "media": "images/teambuilding.jpg"
+        "media": "images/firstMedia/3.jpg"
     },
     {
         "type": "photo",
-        "media": "images/working-people.jpg"
+        "media": "images/firstMedia/4.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/firstMedia/5.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/firstMedia/6.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/firstMedia/7.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/firstMedia/8.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/firstMedia/9.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/firstMedia/10.jpg"
+    }
+];
+let mediaArraySecond = [{
+        "type": "photo",
+        "media": "images/secondMedia/11.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/12.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/13.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/14.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/15.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/16.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/17.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/18.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/19.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/secondMedia/20.jpg"
+    }
+];
+let mediaArrayThird = [{
+        "type": "photo",
+        "media": "images/thirdMedia/21.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/thirdMedia/22.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/thirdMedia/23.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/thirdMedia/24.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/thirdMedia/25.jpg"
+    },
+    {
+        "type": "photo",
+        "media": "images/thirdMedia/26.jpg"
     }
 ];
 
@@ -256,6 +346,12 @@ bot.on('message', function (msg) {
         bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n<b><u>Приклад</u></b>\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum molestias dicta fuga aliquam amet vero? Sint repellendus sapiente perferendis ducimus ab voluptas dolor nulla, asperiores optio quibusdam, placeat doloremque incidunt.\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
     } else if (msg.text === "📷 Екскурсія університетом") {
         bot.sendMediaGroup(msg.chat.id, mediaArrayFirst);
+        setTimeout(function() {
+            bot.sendMediaGroup(msg.chat.id, mediaArraySecond);
+        },400);
+        setTimeout(function() {
+            bot.sendMediaGroup(msg.chat.id, mediaArrayThird);
+        },800);
     } else if (msg.text === "🔹 Структура Університету") {
         let video = 'video/structure.mp4';
         bot.sendVideo(msg.chat.id, video);
