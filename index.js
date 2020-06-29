@@ -348,10 +348,10 @@ bot.on('message', function (msg) {
         bot.sendMediaGroup(msg.chat.id, mediaArrayFirst);
         setTimeout(function() {
             bot.sendMediaGroup(msg.chat.id, mediaArraySecond);
-        },400);
+        },1000);
         setTimeout(function() {
             bot.sendMediaGroup(msg.chat.id, mediaArrayThird);
-        },800);
+        },2000);
     } else if (msg.text === "🔹 Структура Університету") {
         let video = 'video/structure.mp4';
         bot.sendVideo(msg.chat.id, video);
