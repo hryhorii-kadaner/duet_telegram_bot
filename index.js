@@ -346,12 +346,12 @@ bot.on('message', function (msg) {
         bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n<b><u>Приклад</u></b>\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum molestias dicta fuga aliquam amet vero? Sint repellendus sapiente perferendis ducimus ab voluptas dolor nulla, asperiores optio quibusdam, placeat doloremque incidunt.\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
     } else if (msg.text === "📷 Екскурсія університетом") {
         bot.sendMediaGroup(msg.chat.id, mediaArrayFirst);
-        setTimeout(function() {
-            bot.sendMediaGroup(msg.chat.id, mediaArraySecond);
-        },400);
-        setTimeout(function() {
-            bot.sendMediaGroup(msg.chat.id, mediaArrayThird);
-        },800);
+        // setTimeout(function() {
+        //     bot.sendMediaGroup(msg.chat.id, mediaArraySecond);
+        // },400);
+        // setTimeout(function() {
+        //     bot.sendMediaGroup(msg.chat.id, mediaArrayThird);
+        // },800);
     } else if (msg.text === "🔹 Структура Університету") {
         let video = 'video/structure.mp4';
         bot.sendVideo(msg.chat.id, video);
