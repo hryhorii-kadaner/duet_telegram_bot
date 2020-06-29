@@ -12,9 +12,9 @@ let mainOptions = {
     "reply_markup": {
         hide_keyboard: false,
         "keyboard": [
-            ["Про Державний університет економіки та технологій"],
-            ["Спеціальності", "Спитай про вступ"],
-            ["Екскурсія університетом", "Наші контакти"]
+            ["🏢 Про Державний університет економіки та технологій"],
+            ["📃 Спеціальності", "❓ Спитай про вступ"],
+            ["📷 Екскурсія університетом", "📧 Наші контакти"]
         ]
     }
 };
@@ -23,9 +23,9 @@ let aboutDUET = {
     "reply_markup": {
         hide_keyboard: false,
         "keyboard": [
-            ["Загальна інформація"],
-            ["Структура Університету"],
-            ["Переваги ДУЕТ"],
+            ["🔹 Загальна інформація"],
+            ["🔹 Структура Університету"],
+            ["🔹 Переваги ДУЕТ"],
             ["← На головну"]
         ]
     }
@@ -50,9 +50,9 @@ let speciality = {
     "reply_markup": {
         hide_keyboard: false,
         "keyboard": [
-            ["Кваліфікований робітник", "Фаховий молодший бакалавр"],
-            ["Молодший бакалавр", "Бакалавр"],
-            ["Магістр"],
+            ["👷‍♂ Кваліфікований робітник", "👩‍🔬 Фаховий молодший бакалавр"],
+            ["👩‍💻 Молодший бакалавр", "👩‍🎓 Бакалавр"],
+            ["👨‍🎓 Магістр"],
             ["← На головну"]
         ]
     }
@@ -64,7 +64,7 @@ let littleBachelor = {
     "reply_markup": {
         hide_keyboard: false,
         "keyboard": [
-            ["Спеціальності"],
+            ["📃 Спеціальності"],
             ["На базі 9 класів"],
             ["На базі 11 класів"],
             ["← На головну"]
@@ -76,7 +76,7 @@ let contactDuet = {
     "reply_markup": {
         hide_keyboard: false,
         "keyboard": [
-            ["Наші контакти"],
+            ["📧 Наші контакти"],
             ["Економічний інститут (КЕІ КНЕУ)", "Технологічний інститут (КМІНметАУ)"],
             ["← На головну"]
         ]
@@ -100,10 +100,9 @@ let questions = {
     }
 };
 
-let mediaArray = [{
+let mediaArrayFirst = [{
         "type": "photo",
-        "media": "images/library.jpg",
-        "caption": "Test media message"
+        "media": "images/library.jpg"
     },
     {
         "type": "photo",
@@ -151,16 +150,16 @@ bot.on('message', function (msg) {
         bot.sendMessage(msg.chat.id, "Вас вітає бот-помічник ДУЕТ!", mainOptions);
     } else if (msg.text === "← На головну") {
         bot.sendMessage(msg.chat.id, "Ви повернулись на головну сторінку!", mainOptions);
-    } else if (msg.text === "Про Державний університет економіки та технологій") {
+    } else if (msg.text === "🏢 Про Державний університет економіки та технологій") {
         bot.sendMessage(msg.chat.id, "Якась історія про університет чи що ви там захочете...", aboutDUET);
-    } else if (msg.text === "Спеціальності") {
+    } else if (msg.text === "📃 Спеціальності") {
         bot.sendMessage(msg.chat.id, "Оберіть спеціальність", speciality);
-    } else if (msg.text === "Кваліфікований робітник") {
+    } else if (msg.text === "👷‍♂ Кваліфікований робітник") {
         bot.sendMessage(msg.chat.id, qualifiedWorkerMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    } else if (msg.text === "Фаховий молодший бакалавр") {
+    } else if (msg.text === "👩‍🔬 Фаховий молодший бакалавр") {
         bot.sendMessage(msg.chat.id, "На базі 9 чи 11 класів?", littleBachelor);
     } else if (msg.text === "На базі 9 класів") {
         bot.sendMessage(msg.chat.id, ninethClassesMessage, {
@@ -172,22 +171,22 @@ bot.on('message', function (msg) {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    } else if (msg.text === "Молодший бакалавр") {
+    } else if (msg.text === "👩‍💻 Молодший бакалавр") {
         bot.sendMessage(msg.chat.id, littleBachelorMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    } else if (msg.text === "Бакалавр") {
+    } else if (msg.text === "👩‍🎓 Бакалавр") {
         bot.sendMessage(msg.chat.id, bachelorMessage, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    } else if (msg.text === "Магістр") {
+    } else if (msg.text === "👨‍🎓 Магістр") {
         bot.sendMessage(msg.chat.id, magistr, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    } else if (msg.text === "Наші контакти") {
+    } else if (msg.text === "📧 Наші контакти") {
         bot.sendMessage(msg.chat.id, "Наші контакти в меню", ourContacts);
     } else if (msg.text === "Державний університет економіки та технологій") {
         bot.sendMessage(msg.chat.id, "Оберіть в меню", contactDuet);
@@ -226,7 +225,7 @@ bot.on('message', function (msg) {
             parse_mode: "HTML",
             disable_web_page_preview: true
         });
-    } else if (msg.text === "Спитай про вступ") {
+    } else if (msg.text === "❓ Спитай про вступ") {
         bot.sendMessage(msg.chat.id, "Оберіть запитання в меню", questions);
     } else if (msg.text === "Скільки заяв я можу подати?") {
         bot.sendMessage(msg.chat.id, answer1, {
@@ -255,15 +254,15 @@ bot.on('message', function (msg) {
         });
     } else if (msg.text === "Запитати щось інше") {
         bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання на вказаний аккаунт:</b> @MrGregorK.\n\n<b><u>Приклад</u></b>\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum molestias dicta fuga aliquam amet vero? Sint repellendus sapiente perferendis ducimus ab voluptas dolor nulla, asperiores optio quibusdam, placeat doloremque incidunt.\n\n<i>З повагою адміністрація ДУЕТ.</i>", questions);
-    } else if (msg.text === "Екскурсія університетом") {
-        bot.sendMediaGroup(msg.chat.id, mediaArray);
-    } else if (msg.text === "Структура Університету") {
+    } else if (msg.text === "📷 Екскурсія університетом") {
+        bot.sendMediaGroup(msg.chat.id, mediaArrayFirst);
+    } else if (msg.text === "🔹 Структура Університету") {
         let video = 'video/structure.mp4';
         bot.sendVideo(msg.chat.id, video);
-    } else if (msg.text === "Переваги ДУЕТ") {
+    } else if (msg.text === "🔹 Переваги ДУЕТ") {
         let adv = 'images/advantages.jpg';
         bot.sendPhoto(msg.chat.id, adv);
-    } else if (msg.text === "Загальна інформація") {
+    } else if (msg.text === "🔹 Загальна інформація") {
         bot.sendMessage(msg.chat.id, whyDuet, {
             parse_mode: "HTML",
             disable_web_page_preview: true
