@@ -355,8 +355,8 @@ bot.on('message', function (msg) {
             bot.sendMediaGroup(msg.chat.id, mediaArrayThird);
         },2000);
     } else if (msg.text === "🔹 Структура Університету") {
-        let video = 'video/structure.mp4';
-        bot.sendVideo(msg.chat.id, video);
+        let photo = 'images/structure.jpg';
+        bot.sendPhoto(msg.chat.id, photo);
     } else if (msg.text === "🔹 Переваги ДУЕТ") {
         let adv = 'images/advantages.jpg';
         bot.sendPhoto(msg.chat.id, adv);
