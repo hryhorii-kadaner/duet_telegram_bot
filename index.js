@@ -345,7 +345,7 @@ bot.on('message', function (msg) {
             disable_web_page_preview: true
         });
     } else if (msg.text === "Запитати щось інше") {
-        bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання в группі/чаті/бесіді...:</b> @MrGregorK.", questions);
+        bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання в чат</b> @faq_duet.", questions);
     } else if (msg.text === "📷 Екскурсія університетом") {
         bot.sendMediaGroup(msg.chat.id, mediaArrayFirst);
         setTimeout(function() {
