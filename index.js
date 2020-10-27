@@ -1,7 +1,7 @@
 // Библиотека для работы с Telegram API
 let TelegramBot = require('node-telegram-bot-api');
 // Токен Бота
-let token = '1264618439:AAHTxb9rNBGdF7kQy6ICarFupd_YalyZksk';
+let token = '1385373473:AAEoW1nyzkD4YZSOWGrwvZpaOU8rByoAlJ4';
 // Обращение к серверу Telegram, чтобы получа\ить актуальную информацию
 let bot = new TelegramBot(token, {
     polling: true
