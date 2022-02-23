@@ -6,6 +6,23 @@ let token = '1385373473:AAEoW1nyzkD4YZSOWGrwvZpaOU8rByoAlJ4';
 let bot = new TelegramBot(token, {
     polling: true
 });
+//////////////////////////////////
+const steam_api_url = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=1&market_hash_name=AWP%20|%20Neo-Noir%20(Field-Tested)";
+const getData = async function (url) {
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error(`Ошибка по адресу ${url}, статус ошибки ${response.status}!`);
+	}
+	return await response.json();
+};
+
+getData(steam_api_url).then(data => {
+    bot.sendMessage(466777337, JSON.stringify(data));
+	// setInterval(() => {
+    //     bot.sendMessage(466777337, JSON.stringify(data));
+    // }, 3600000);
+});
+//////////////////////////////////
 
 // Запускает установочный процесс по временам выбранным пользователем
 let mainOptions = {
