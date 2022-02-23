@@ -10,22 +10,28 @@ let bot = new TelegramBot(token, {
 const fetch = require('node-fetch');
 const steam_api_url = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=1&market_hash_name=AWP%20|%20Neo-Noir%20(Field-Tested)";
 const getData = async function (url) {
-	const response = await fetch(url);
-	if (!response.ok) {
-		throw new Error(`Ошибка по адресу ${url}, статус ошибки ${response.status}!`);
-	}
-	return await response.json();
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Ошибка по адресу ${url}, статус ошибки ${response.status}!`);
+    }
+    return await response.json();
 };
 
-getData(steam_api_url).then(data => {
-    bot.sendMessage(466777337, `<b>AWP | Неонуар</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {parse_mode: "HTML"});
-    
-	setInterval(() => {
+
+setInterval(() => {
+    getData(steam_api_url).then(data => {
         if (data.lowest_price <= 25.90) {
-            bot.sendMessage(466777337, `💸<b>AWP | Неонуар доступно к покупке!</b>💸\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {parse_mode: "HTML"});
-        }        
-    }, 3600000);
-});
+            bot.sendMessage(466777337, `💸<b>AWP | Неонуар доступно к покупке!</b>💸\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+                parse_mode: "HTML"
+            });
+        } else {
+            bot.sendMessage(466777337, `<b>AWP | Неонуар</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+                parse_mode: "HTML"
+            });
+        }
+    });
+}, 3600000);
+
 //////////////////////////////////
 
 // Запускает установочный процесс по временам выбранным пользователем
@@ -370,12 +376,12 @@ bot.on('message', function (msg) {
         bot.sendMessage(msg.chat.id, "<b>Надішліть ваше запитання в чат</b> @faq_duet.", questions);
     } else if (msg.text === "📷 Екскурсія університетом") {
         bot.sendMediaGroup(msg.chat.id, mediaArrayFirst);
-        setTimeout(function() {
+        setTimeout(function () {
             bot.sendMediaGroup(msg.chat.id, mediaArraySecond);
-        },1000);
-        setTimeout(function() {
+        }, 1000);
+        setTimeout(function () {
             bot.sendMediaGroup(msg.chat.id, mediaArrayThird);
-        },2000);
+        }, 2000);
     } else if (msg.text === "🔹 Структура Університету") {
         let photo = 'images/structure.jpg';
         bot.sendPhoto(msg.chat.id, photo);
