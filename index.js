@@ -7,8 +7,7 @@ let bot = new TelegramBot(token, {
     polling: true
 });
 //////////////////////////////////
-import {fetch} from "node-fetch";
-
+const fetch = require('node-fetch');
 const steam_api_url = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=1&market_hash_name=AWP%20|%20Neo-Noir%20(Field-Tested)";
 const getData = async function (url) {
 	const response = await fetch(url);
