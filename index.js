@@ -17,6 +17,9 @@ const getData = async function (url) {
     return await response.json();
 };
 
+bot.sendMessage(466777337, `<b>AWP | Неонуар</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+    parse_mode: "HTML"
+});
 
 setInterval(() => {
     getData(steam_api_url).then(data => {
