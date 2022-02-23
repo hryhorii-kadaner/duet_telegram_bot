@@ -18,10 +18,13 @@ const getData = async function (url) {
 };
 
 getData(steam_api_url).then(data => {
-    bot.sendMessage(466777337, JSON.stringify(data));
-	// setInterval(() => {
-    //     bot.sendMessage(466777337, JSON.stringify(data));
-    // }, 3600000);
+    bot.sendMessage(466777337, `<b>AWP | Неонуар</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {parse_mode: "HTML"});
+    
+	setInterval(() => {
+        if (data.lowest_price <= 25.90) {
+            bot.sendMessage(466777337, `💸<b>AWP | Неонуар доступно к покупке!</b>💸\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {parse_mode: "HTML"});
+        }        
+    }, 3600000);
 });
 //////////////////////////////////
 
