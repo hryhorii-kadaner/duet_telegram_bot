@@ -17,7 +17,17 @@ const getData = async function (url) {
     }
     return await response.json();
 };
-
+getData(steam_api_case).then(data => {
+        if (data.lowest_price >= 0.70) {
+            bot.sendMessage(466777337, `💸<b>Кейс операции «Хищные воды» доступны к продаже!</b>💸\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+                parse_mode: "HTML"
+            });
+        } else {
+            bot.sendMessage(466777337, `<b>Кейс операции «Хищные воды»</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+                parse_mode: "HTML"
+            });
+        }
+    });
 setInterval(() => {
     getData(steam_api_url).then(data => {
         if (data.lowest_price <= 25.90) {
