@@ -9,7 +9,7 @@ let bot = new TelegramBot(token, {
 //////////////////////////////////
 const fetch = require('node-fetch');
 const steam_api_url = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=1&market_hash_name=AWP%20|%20Neo-Noir%20(Field-Tested)";
-conat steam_api_case = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=1&market_hash_name=Operation%20Riptide%20Case";
+const steam_api_case = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=1&market_hash_name=Operation%20Riptide%20Case";
 const getData = async function (url) {
     const response = await fetch(url);
     if (!response.ok) {
