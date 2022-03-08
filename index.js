@@ -9,6 +9,7 @@ let bot = new TelegramBot(token, {
 //////////////////////////////////
 const fetch = require('node-fetch');
 const steam_api_url = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=1&market_hash_name=AWP%20|%20Neo-Noir%20(Field-Tested)";
+conat steam_api_case = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=1&market_hash_name=Operation%20Riptide%20Case";
 const getData = async function (url) {
     const response = await fetch(url);
     if (!response.ok) {
@@ -25,6 +26,17 @@ setInterval(() => {
             });
         } else {
             bot.sendMessage(466777337, `<b>AWP | Неонуар</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+                parse_mode: "HTML"
+            });
+        }
+    });
+    getData(steam_api_case).then(data => {
+        if (data.lowest_price >= 0.70) {
+            bot.sendMessage(466777337, `💸<b>Кейс операции «Хищные воды» доступны к продаже!</b>💸\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+                parse_mode: "HTML"
+            });
+        } else {
+            bot.sendMessage(466777337, `<b>Кейс операции «Хищные воды»</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
                 parse_mode: "HTML"
             });
         }
