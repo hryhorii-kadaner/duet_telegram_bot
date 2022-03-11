@@ -19,11 +19,11 @@ const getData = async function (url) {
 };
 getData(steam_api_case).then(data => {
         if (Number(data.lowest_price).toFixed(2) >= Number(0.7000000000000001).toFixed(2)) {
-            bot.sendMessage(466777337, `💸<b>Кейс операции «Хищные воды» доступны к продаже!</b>💸\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+            bot.sendMessage(466777337, `💸<b>Кейс операции «Хищные воды» доступны к продаже!</b>💸\nСейчас его цена: <i>${data.lowest_price}</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
                 parse_mode: "HTML"
             });
         } else {
-            bot.sendMessage(466777337, `<b>Кейс операции «Хищные воды»</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+            bot.sendMessage(466777337, `<b>Кейс операции «Хищные воды»</b>\nСейчас его цена: <i>${data.lowest_price}</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
                 parse_mode: "HTML"
             });
         }
@@ -31,11 +31,11 @@ getData(steam_api_case).then(data => {
 setInterval(() => {
     getData(steam_api_url).then(data => {
         if (Number(data.lowest_price).toFixed(2) <= Number(25.90).toFixed(2)) {
-            bot.sendMessage(466777337, `💸<b>AWP | Неонуар доступно к покупке!</b>💸\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+            bot.sendMessage(466777337, `💸<b>AWP | Неонуар доступно к покупке!</b>💸\nСейчас его цена: <i>${data.lowest_price}</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
                 parse_mode: "HTML"
             });
         } else {
-            bot.sendMessage(466777337, `<b>AWP | Неонуар</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+            bot.sendMessage(466777337, `<b>AWP | Неонуар</b>\nСейчас его цена: <i>${data.lowest_price}</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
                 parse_mode: "HTML"
             });
         }
@@ -46,7 +46,7 @@ setInterval(() => {
                 parse_mode: "HTML"
             });
         } else {
-            bot.sendMessage(466777337, `<b>Кейс операции «Хищные воды»</b>\nСейчас его цена: <i>${data.lowest_price}$</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
+            bot.sendMessage(466777337, `<b>Кейс операции «Хищные воды»</b>\nСейчас его цена: <i>${data.lowest_price}</i>,\nСредняя цена покупки: <i>${data.median_price}</i>`, {
                 parse_mode: "HTML"
             });
         }
